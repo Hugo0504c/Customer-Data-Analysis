@@ -63,5 +63,3 @@ Requirements: Python 3.12+ and pandas.
 pip install pandas
 python main.py
 ```
-
-> Note: `main.py` reads the CSV from an absolute path. If you clone the repo, change it to `pd.read_csv("customers.csv")`.

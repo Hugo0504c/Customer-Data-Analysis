@@ -1,6 +1,8 @@
+from pathlib import Path
+
 import pandas as pd
 
-df = pd.read_csv(r"C:\Users\hugop\Desktop\Code\AI\data analysis\Pandas\Práctica 2\customers.csv")
+df = pd.read_csv(Path(__file__).parent / "customers.csv")
 print("Initial Data:")
 
 print(f"Number of customers: {df["Age"].count()}")
@@ -25,6 +27,6 @@ print(monthly_income.round(2))
 cuant_of_people_per_country = df.groupby("Country").size()
 cuant_of_churn_per_country = (df["Churn"] == "Yes").groupby(df["Country"]).sum()
 churn_rate_per_country = cuant_of_churn_per_country/cuant_of_people_per_country * 100
-churn_rate_per_country.sort_values(ascending=False, inplace=True)
+churn_rate_per_country = churn_rate_per_country.sort_values(ascending=False)
 
 print(f"Countries with higher churn rates:{churn_rate_per_country[:3].round(2)}")
