@@ -59,7 +59,17 @@ The goal is to find out which customer profiles are more likely to leave (churn)
 
 Requirements: Python 3.12+ and pandas.
 
+Open a terminal and run:
+
 ```bash
+git clone https://github.com/Hugo0504c/Customer-Data-Analysis.git
+cd Customer-Data-Analysis
 pip install pandas
+python main.py
+```
+
+If you already have the project folder, just run this from inside it:
+
+```bash
 python main.py
 ```
